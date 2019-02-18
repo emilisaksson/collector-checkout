@@ -24,12 +24,12 @@ Require the module:
 
 Initialize the module with your username, access key, and store ID:
 ```javascript
-    let collectorCheckout = new Collector.CollectorCheckout('your-username', 'your-access-key', 'your-store-id');
+    let collectorCheckout = new Collector.CollectorCheckout({ countryCode: "SE", username: 'your-username', accessKey: 'your-access-key', storeId: 123 });
 ```
 
 To target the test environment:
 ```javascript
-    let collectorCheckout = new Collector.CollectorCheckout('your-username', 'your-access-key', 'your-store-id', { test: true });
+    let collectorCheckout = new Collector.CollectorCheckout({ countryCode: "SE", username: 'your-username', accessKey: 'your-access-key', storeId: 123, test: true });
 ```
 
 
