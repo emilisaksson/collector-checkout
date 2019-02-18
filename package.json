@@ -1,0 +1,36 @@
+{
+  "name": "collector-checkout",
+  "version": "0.1.0",
+  "description": "A Collector Checkout module for Node.js.",
+  "main": "dist/index.js",
+  "types" : "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilisaksson/collector-checkout.git"
+  },
+  "keywords": [
+    "payment",
+    "checkout",
+    "gateway",
+    "api",
+    "collector",
+    "e-commerce"
+  ],
+  "author": "Emil Isaksson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilisaksson/collector-checkout/issues"
+  },
+  "homepage": "https://github.com/emilisaksson/collector-checkout#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@types/request": "^2.48.1",
+    "typescript": "^3.3.3"
+  }
+}
