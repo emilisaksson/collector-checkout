@@ -111,6 +111,7 @@ export declare class CollectorCheckout {
     private authorizationGenerator;
     constructor(config: Config);
     getApiUrl: (path: string) => string;
+    getFrontendUrl: (path: string) => string;
     private request;
     getScriptTag: (config: {
         publicToken: string;

@@ -53,6 +53,9 @@ var CollectorCheckout = /** @class */ (function () {
         this.getApiUrl = function (path) {
             return "" + ADDRESSES.BACKEND[_this.config.test ? 'TEST' : 'PRODUCTION'] + path;
         };
+        this.getFrontendUrl = function (path) {
+            return "" + ADDRESSES.FRONTEND[_this.config.test ? 'TEST' : 'PRODUCTION'] + path;
+        };
         this.request = function (method, path, data) { return __awaiter(_this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -94,7 +97,7 @@ var CollectorCheckout = /** @class */ (function () {
         }); };
         // Utility method for getting the script tag
         this.getScriptTag = function (config) {
-            var attributes = "src=\"" + _this.getApiUrl('/collector-checkout-loader.js') + "\"";
+            var attributes = "src=\"" + _this.getFrontendUrl('/collector-checkout-loader.js') + "\"";
             attributes += " data-token=\"" + config.publicToken + "\"";
             if (!config.padding)
                 attributes += " data-padding=\"none\"";

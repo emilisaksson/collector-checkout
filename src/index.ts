@@ -182,6 +182,10 @@ export class CollectorCheckout {
         return `${ADDRESSES.BACKEND[this.config.test ? 'TEST' : 'PRODUCTION']}${path}`;
     }
 
+    public getFrontendUrl = (path: string) => {
+        return `${ADDRESSES.FRONTEND[this.config.test ? 'TEST' : 'PRODUCTION']}${path}`;
+    }
+
     private request = async (method: string, path: string, data?: any) => {
         data = Object.assign(data || {}, {
             storeId: this.config.storeId,
@@ -224,7 +228,7 @@ export class CollectorCheckout {
             actionColor?: string
         }) => {
 
-        let attributes = `src="${this.getApiUrl('/collector-checkout-loader.js')}"`;
+        let attributes = `src="${this.getFrontendUrl('/collector-checkout-loader.js')}"`;
         attributes += ` data-token="${config.publicToken}"`;
 
         if (!config.padding)
