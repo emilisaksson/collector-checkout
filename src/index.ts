@@ -178,7 +178,7 @@ export class CollectorCheckout {
         this.authorizationGenerator = Utility.authorizationGenerator(config.username, config.accessKey);
     }
 
-    private getApiUrl = (path: string) => {
+    public getApiUrl = (path: string) => {
         return `${ADDRESSES.BACKEND[this.config.test ? 'TEST' : 'PRODUCTION']}${path}`;
     }
 
