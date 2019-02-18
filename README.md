@@ -18,17 +18,17 @@ Read the [Collector Checkout API documentation](http://web-checkout-documentatio
 ## Examples
 
 Require the module:
-```
+```javascript
     let Collector = require('collector-checkout');
 ```
 
 Initialize the module with your username, access key, and store ID:
-```
+```javascript
     let collectorCheckout = new Collector.CollectorCheckout('your-username', 'your-access-key', 'your-store-id');
 ```
 
 To target the test environment:
-```
+```javascript
     let collectorCheckout = new Collector.CollectorCheckout('your-username', 'your-access-key', 'your-store-id', { test: true });
 ```
 
@@ -38,7 +38,7 @@ To target the test environment:
 ### initCheckout
 Initialize a Checkout
 
-```
+```javascript
 
     let checkoutData = {
         redirectPageUri: 'https://your-redirect-url.com',
@@ -82,7 +82,7 @@ Initialize a Checkout
 ### updateCart
 Update the cart
 
-```
+```javascript
     let privateId; // Id acquired from initCheckout
     let updatedCart = {
         items: [
@@ -121,7 +121,7 @@ Update the cart
 ### updateFees
 Update the fees
 
-```
+```javascript
     let privateId; // Id acquired from initCheckout
     let updatedFees = {
         shipping: {
@@ -158,7 +158,7 @@ Update the fees
 ### updateReference
 Update the reference
 
-```
+```javascript
     let privateId; // Id acquired from initCheckout
 
 
@@ -185,7 +185,8 @@ Update the reference
 
 ### getScriptTag
 Used to get the client script tag with the correct attributes
-```
+
+```javascript
     let publicToken; // Public token acquired from initCheckout
     let data = {
             publicToken: publicToken,
