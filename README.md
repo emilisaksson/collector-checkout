@@ -202,7 +202,9 @@ Used to get the client script tag with the correct attributes
 ## Authors
 
 * **Emil Isaksson** - *Creator* - [emilisaksson](https://github.com/emilisaksson)
+
 [KA50.se](https://ka50.se)
+
 [emilisaksson.se](https://emilisaksson.se)
 
 
